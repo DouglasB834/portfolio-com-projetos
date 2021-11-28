@@ -1,0 +1,632 @@
+/*==== ESTILO GERAL ====*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    background: gray;
+}
+
+.container1{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),transparent),url(images/banner02.jpg) no-repeat; 
+    background-size: cover;
+    background-position:center ;
+    padding: 0 8%;
+    position: relative;
+}
+/*==== ESTILO MENU TOP ====*/
+
+.logo{
+    width: 180px;
+    cursor: pointer;
+   
+    
+}
+
+.menu_top{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /*efine a direção em que as linhas são empilhadas.flex-wrap*/
+    width: 100%;
+    padding: 5px 0;
+
+}
+
+.menu_top ul{
+    flex:1;
+    text-align: right;
+    padding-right: 30px;
+    display: none; /*mudar*/
+}
+
+.menu_top ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+.menu_top ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.menu_top ul li a::after{
+    background: #fff;
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: width .3s;
+}
+
+.menu_top ul li a:hover::after{
+    width: 50%;
+}
+
+.cart-icon a{
+    width: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    transition: color .2s;
+    margin:0 10px 0 25px; /*mudar*/
+}
+.cart-icon a:hover{
+    color: rgba(116, 177, 228, 0.63);
+}
+
+.cart-icon a:active{
+    color: rgb(69, 185, 170);
+}
+
+/* ==== ESTILO TEXTO ==== */
+
+.text-box{
+    color: #fff;
+    position: absolute;
+    bottom:8% ;
+}
+
+.text-box p{
+   font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montagu Slab', serif;
+}
+
+.text-box h1{
+    font-size: 3.5em;
+    line-height: 160px;
+    /*margin-left: -10px; mudar */ 
+    color: transparent;
+    -webkit-text-stroke: 1px #fff ;
+    background: url(images/back.png);
+    -webkit-background-clip: text; /*define se o fundo de um elemento se estende abaixo de sua caixa de borda,
+    faz o texto ficar atras do background*/
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100%{
+        background-position: 2000px 0 ;/**/
+    }
+
+}
+
+.text-box h3{
+    font-size: 15px;
+    font-weight: 550;
+    /*font-size: 30px; mudar*/
+}
+
+/*==== ESTILO CONTATO  ====*/
+.text-box .contato{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap ;
+    margin-top: 20px;
+}
+
+.text-box a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    margin-right: 15px;
+    align-items: center;
+    margin-bottom: 10px; /*mudar tirar*/
+    display: flex;
+   
+}
+.contato a:hover{
+    background-color: rgba(91, 128, 158, 0.63);
+}
+.contato a:active{
+    background-color: rgba(65, 169, 187, 0.411);
+}
+
+.text-box span{
+    font-size: 20px;
+    line-height: 15px;
+    margin-left:5px ;    /*arrumar seta*/
+    font-family: 'Montagu Slab', serif;
+}
+
+.sub_text span {
+    font-size: 18px;
+    line-height: 20px; 
+}
+
+/*ESTILO DOS ICONS*/
+.icons{
+    position: absolute;
+    top: 1%; /*mudar para bot*/
+    right: 2%; /*mudar 5%*/
+}
+.icons a{
+    display: block;
+    width: 25px;
+    margin: 20px 5px;
+    font-size: 20px; /*mudar 30px*/
+    color: rgb(255, 255, 255);
+}
+
+.icons a:hover{
+    color: rgb(64, 132, 187);
+}
+@media only screen and (min-width: 515px) {
+    .menu_top ul {
+        display: inline-block;
+    }
+
+    .text-box p {
+        font-size: 35px;
+    }
+
+    .text-box h3{
+        font-size: 22px;
+    }
+
+    .text-box a span{
+       font-size:30px;
+       
+    }
+    .text-box span{
+        font-size: 30px;
+        
+    }
+
+    .sub_text span {
+        font-size: 22px;
+    }
+
+    .text-box h1 {
+        font-size: 6em;
+        margin-left: -10px;
+    }   
+    .icons a{
+        font-size: 25px;
+        
+    }
+    .projetos img{
+        width: 100% !important;
+        display: block;
+    }
+    .projetos span{
+        top: 40%;
+        left: 25%;
+        font-size: 2rem !important;
+       
+    }
+    /*braking point Projeto */
+    .container-fundo{
+      
+        transform: rotate(1deg) !important;
+        font-size: 25px !important;
+      
+    }
+    .fundo-projeto h2{
+        font-size: 3em !important;
+        letter-spacing: 0.5em;
+        
+    }
+
+
+}
+@media only screen and (min-width: 1020px) {
+    .text-box h1 {
+        font-size: 10em;
+        
+    }
+    .text-box p {
+        font-size: 50px;
+    }
+    .text-box h3{
+        font-size: 29px;
+    }
+
+    /*braking point Projeto */
+    .container-fundo{
+        transform: rotate(1deg) !important;
+        font-size: 25px !important;
+      
+    }
+    .fundo-projeto h2{
+        font-size: 6em !important;
+        letter-spacing: .8em !important;
+        
+    }
+    
+}
+
+
+/* ========  ESTILO SEGUNDA 2 SEÇÃO ========  */
+.container2{
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    min-height: 60vh;
+    width: 100%;
+
+} 
+
+.container_projetos{
+    display: flex;
+    width: 100%;
+    min-height: auto;/*rever isso */
+    flex-wrap:wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;   
+    
+}
+
+.fundo-projeto{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #111;
+}
+.fundo-projeto .container-fundo{
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    transform: rotate(-25deg);
+    font-size: 16px;
+  
+}
+
+.fundo-projeto i {
+    color: rgb(0, 0, 0 , 0.5);
+    transition: 1s;
+    padding: 5px;
+    user-select: none;
+    cursor: default;
+}
+.fundo-projeto i:hover{
+    color: #0f0;
+    text-shadow:0 0 120px #0f0;
+    transition: 0s;
+    
+}
+.fundo-projeto h2{
+    width: 100%;
+    font-size: 2em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    color: #ddd;
+    letter-spacing: 0.6em;
+    
+}
+
+.separação{
+    width: 100%;
+}
+
+.projetos{
+    position: relative;
+    margin: 70px 20px 20px 20px;
+    left: 1%;
+}
+
+.projetos img{
+    width: 90%;
+    display: block;
+    border-radius: 4px;
+    transition: 4s linear;
+    box-shadow: -5px 7px 5px 0px rgba(128, 19, 179, 0.267);
+
+}
+.projetos img:hover{
+    transform: scale(1.1);
+    opacity: .6;
+}
+
+
+
+.projetos img:hover{
+    filter: drop-shadow(0 0 10px rgb(60, 7, 253))
+ 
+}   
+
+.projetos span{
+    color: rgb(201, 198, 198);
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 20%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform:uppercase
+}
+
+/* ======= ESTILO DA SEGUNDA  3 SEÇÃO ========== */
+.container3{ /*"body"*/
+    min-height: 100vh;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(128, 128, 128);
+    background: url(images/bannernatal.jfif) no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+ 
+}
+.container_about{
+    overflow: hidden;
+    display: flex;
+    width: 1100px;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap; /*permite a quebra dos elementos . sem fica um ao lado do outro*/
+    padding: 30px;
+
+}
+
+.container_about .card_text{
+    display: flex;
+    flex-direction: column; /*trasnforma os elemtnos flex em colunas */
+    max-width: 320px;
+    height: 230px; /*mudar 200 +ou-*/
+    position: relative;
+    background: rgba(189, 194, 204, 0.315);
+    margin: 30px 10px;
+    padding: 10px 15px;
+    box-shadow: -4px 6px 5px 1px rgba(0, 0, 0, 0.432);
+    transition: .6s ease-in-out;
+    
+}
+.container_about .card_text:hover{
+    height: 420px;
+    background: rgb(189, 194, 204);
+}
+
+.img_box{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    top: -50px;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.img_box:hover{
+    overflow: visible;
+}
+.img_box h3{
+    display: flex;
+    position: absolute;
+    bottom:5%;
+    left: 2%;
+    font-size: 8rem;
+    z-index: 10;
+    color: rgba(61, 60, 60, 0.705);
+}
+
+.img_box .light{
+    display: block;
+    position: absolute;
+}
+.img_box:hover .light {
+    display: none;
+}
+
+/*estilo light*/
+.img_box .light:nth-child(1){ /*1o span*/
+    background: linear-gradient(90deg, transparent,rgb(109, 3, 248));
+    top: 0;
+    left: -100px;
+    width: 150px;
+    height: 5px;
+    animation:  girar1 2s linear infinite;
+    animation-delay: 0.1s ;
+}
+@keyframes girar1{
+    0%{
+        left: -100;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+.img_box .light:nth-child(3){ /*2o span*/
+    background: linear-gradient(200deg, transparent,rgb(7, 23, 253));
+    right: -100px;
+    bottom: 0;
+    width: 150px;
+    height: 5px;
+    animation:  girar3 2s linear infinite;
+    animation-delay: .1s ;
+}
+
+
+@keyframes girar3{
+    
+    0%{
+        right: -100;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+.img_box .light:nth-child(2){ /*2o span*/
+    background: linear-gradient(180deg, transparent,rgb(114, 7, 253));
+    right: 0;
+    top: -100px;
+    width: 5px;
+    height: 150px;
+    animation:  girar2 2s linear infinite;
+    animation-delay: .9s ;
+}
+
+@keyframes girar2{
+    
+    0%{
+        top: -100;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+.img_box .light:nth-child(4){ /*2o span*/
+    background: linear-gradient(360deg, transparent,rgb(7, 23, 253));
+    bottom: -100px; /*testa com 0*/
+    left: 0px;
+    width: 5px;
+    height: 150px;
+    animation:  girar4 2s linear infinite;
+    animation-delay: .9s ;
+}
+
+@keyframes girar4{
+    
+    0%{
+        bottom: -100;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
+.img_box img {
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.img_box img:hover{ /*colocar cor atras dos elemento, pode ser feito em varias coisas*/
+    filter:drop-shadow(0 0 10px rgb(60, 7, 253))
+           drop-shadow(0 0 20px rgb(60, 7, 253))
+}
+/* estilo do teXto ABOUT */
+.text_box {
+    position: relative;
+    text-align: center;
+    margin-top: -140px;
+    padding: 5px 2px;
+    color: #111;
+    visibility: hidden;
+    opacity:0 ;
+    transition: 0.8s ease-out;/*mesma coisa que o outro*/
+}
+
+.container_about .card_text:hover .text_box{ /* tem  falar todo caminho ate o filho para funcionar o hover .. */
+    visibility: visible ;
+    opacity: 1;
+    margin-top: -40px;
+}
+
+.text_box h2{
+    font-family: 'Montagu Slab', serif;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+
+.text_box p {
+    font-family: 'Montagu Slab', serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.text_box span{
+    background: rgb(80, 77, 77);
+    width: 2px;
+    height: 2px;
+}
+.text_box  figcaption{
+    font-style: italic;
+    font-size: 12px;
+}
+
+@media only screen and (min-width:850px){
+    .container_about .card_text {
+        max-width: 370px;
+    }
+    .img_box {
+        width: 300px;
+        top: -50px;
+        left: 15px;
+    }
+    .text_box p {
+        font-size: 14px;
+    }
+}
+
+
+ @media only screen and (min-width:1200px){
+    .container_about {
+        width: 1980px;
+        
+    }
+
+    .container_about .card_text {
+        max-width: 570px;
+        margin: 30px 30px;
+        height: 330px;
+    }
+    .img_box {
+        width: 465px;
+        top: -70px;
+        left: 31px;
+        margin-top: 16px;
+    }
+ }
+
+
+
+/*==== estilo  seção 4 ====*/
+/*   COMENTARIOS E CONTATOS RODAPE
+.container3{
+    overflow: hidden;
+    background: rgb(80, 138, 80);
+    display: flex;
+    min-height: 50vh;
+    width: 100%;
+    } 
+    */
