@@ -228,7 +228,7 @@ body{
     .container-fundo{
       
         transform: rotate(1deg) !important;
-        font-size: 25px !important;
+        font-size: 14px !important;
       
     }
     .fundo-projeto h2{
@@ -254,7 +254,7 @@ body{
     /*braking point Projeto */
     .container-fundo{
         transform: rotate(1deg) !important;
-        font-size: 25px !important;
+        font-size: 19px !important;
       
     }
     .fundo-projeto h2{
